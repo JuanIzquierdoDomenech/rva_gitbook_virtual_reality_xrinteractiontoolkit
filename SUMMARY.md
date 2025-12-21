@@ -4,6 +4,7 @@
   * [Vision](introduction/vision.md)
   * [Locomotion](introduction/locomotion.md)
   * [Interface](introduction/interface.md)
+  * [Interaction](introduction/interaction.md)
 * [Project setup](project-setup.md)
 * [Button input](button-input.md)
 * [Locomotion](locomotion.md)
