@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+  * [Vision](introduction/vision.md)
 * [Project setup](project-setup.md)
 * [Button input](button-input.md)
 * [Locomotion](locomotion.md)
