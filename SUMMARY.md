@@ -5,6 +5,7 @@
   * [Locomotion](introduction/locomotion.md)
   * [Interface](introduction/interface.md)
   * [Interaction](introduction/interaction.md)
+  * [Unity XR Stack](introduction/unity-xr-stack.md)
 * [Project setup](project-setup.md)
 * [Button input](button-input.md)
 * [Locomotion](locomotion.md)
