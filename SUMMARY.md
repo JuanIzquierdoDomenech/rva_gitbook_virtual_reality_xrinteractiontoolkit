@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
   * [Vision](introduction/vision.md)
+  * [Locomotion](introduction/locomotion.md)
 * [Project setup](project-setup.md)
 * [Button input](button-input.md)
 * [Locomotion](locomotion.md)
