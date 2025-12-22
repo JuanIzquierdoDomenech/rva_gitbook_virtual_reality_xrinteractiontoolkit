@@ -305,7 +305,7 @@ Location: `Assets/Samples/XR Interaction Toolkit/[version]/XR Interaction Simula
 
 ***
 
-### Useful links
+### Documentation
 
 * [XR Interaction Toolkit Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html)
 * [OpenXR Plugin Documentation](https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.8/manual/index.html)
