@@ -2,7 +2,7 @@
 
 Ray and Poke are two essential interaction methods for VR user interfaces. **Ray interaction** allows users to point at UI elements from a distance, while **Poke interaction** enables direct touch-based input, similar to pressing physical buttons.
 
-***
+<figure><img src=".gitbook/assets/Gemini_Generated_Image_2vg9e92vg9e92vg9.png" alt=""><figcaption></figcaption></figure>
 
 ## Ray Interaction with UI
 
@@ -12,9 +12,13 @@ Ray interaction is ideal for interacting with UI panels that are out of arm's re
 
 Create a standard Unity UI Canvas with some interactive elements like buttons and sliders. Right-click in the Hierarchy and select **UI > Canvas**, then add child elements such as Panel, Text, Button, and Slider.
 
-![Creating a UI Canvas with interactive elements](https://claude.ai/chat/images/01_create_ui.png)
+![Creating a UI Canvas with interactive elements](.gitbook/assets/01_create_ui.png)
 
-> 💡 **Standard Unity UI**: The XR Interaction Toolkit works with Unity's built-in UI system (uGUI). You don't need special VR-specific UI components — just configure the Canvas correctly.
+{% hint style="info" %}
+**Standard Unity UI**:&#x20;
+
+The XR Interaction Toolkit works with Unity's built-in UI system (uGUI). You don't need special VR-specific UI components, just configure the Canvas correctly.
+{% endhint %}
 
 ### Convert Canvas to World Space
 
@@ -28,17 +32,19 @@ Select the **Canvas** and configure:
 
 Position the Canvas in your scene where you want it to appear.
 
-![Canvas configured for World Space](https://claude.ai/chat/images/02_worldspace.png)
+![Canvas configured for World Space](.gitbook/assets/02_worldspace.png)
 
-> 💡 **Why Scale 0.001?** Unity UI uses pixel coordinates (e.g., 1920×1080). At scale 1, your Canvas would be 1920 meters wide! Scaling by 0.001 converts pixels to millimeters, making a 1000px wide panel roughly 1 meter in VR.
+{% hint style="info" %}
+**Why Scale 0.001?**&#x20;
 
-> 💡 **Event Camera**: This tells the Canvas which camera to use for UI events. In VR, this should be your Main Camera (the headset camera).
+Unity UI uses pixel coordinates (e.g., 1920×1080). At scale 1, your Canvas would be 1920 meters wide! Scaling by 0.001 converts pixels to millimeters, making a 1000px wide panel roughly 1 meter in VR.
+{% endhint %}
 
 ### Add Ray Interactor to Right Hand
 
 Navigate to **Assets > Samples > XR Interaction Toolkit > \[version] > Starter Assets > Prefabs > Interactors** and drag the **Ray Interactor** prefab as a child of **Right Hand**.
 
-![Adding Ray Interactor prefab to Right Hand](https://claude.ai/chat/images/03_drag_ray_interactor.png)
+![Adding Ray Interactor prefab to Right Hand](.gitbook/assets/03_drag_ray_interactor.png)
 
 > 💡 **Starter Assets Prefabs**: The XR Interaction Toolkit samples include pre-configured interactor prefabs. These save significant setup time and follow best practices.
 
