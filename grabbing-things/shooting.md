@@ -212,6 +212,6 @@ Bit Gun                           [Box Collider, Rigidbody, XR Grab Interactable
 
 ***
 
-### Documentation
+## Documentation
 
 * [XR Grab Interactable Events](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/interactable-events.html)
