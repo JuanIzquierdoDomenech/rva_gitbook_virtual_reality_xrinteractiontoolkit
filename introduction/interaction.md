@@ -11,9 +11,7 @@ The three primary interaction methods are:
 
 <table><thead><tr><th width="180.1953125">Method</th><th>Input Device</th><th>Best For</th></tr></thead><tbody><tr><td><strong>Gaze</strong></td><td>Head movement</td><td>Simple selection, mobile VR</td></tr><tr><td><strong>Ray/Poke</strong></td><td>Controllers</td><td>Pointing at distant objects or touching them</td></tr><tr><td><strong>Hand tracking</strong></td><td>Cameras/gloves</td><td>Natural manipulation</td></tr></tbody></table>
 
-***
-
-## Gaze Interaction
+### Gaze Interaction
 
 The simplest method: the user **looks at** an object to interact with it.
 
@@ -32,9 +30,7 @@ Gaze interaction follows a state machine:
 
 **Limitation**: Low precision sin e everything the user looks at becomes a potential input.
 
-***
-
-## Ray interaction
+### Ray interaction
 
 The most common method in modern VR: a **laser pointer** extends from the controller.
 
@@ -48,8 +44,6 @@ How it works:
 * Objects can be **grabbed** and manipulated at a distance
 
 **Advantages**: Precise, works at any distance, familiar to users.
-
-***
 
 ### Hand tracking
 
@@ -72,7 +66,7 @@ Interactions include:
 
 ***
 
-### Choosing an interaction method
+## Choosing an interaction method
 
 | Method            | Precision | Immersion | Fatigue     | Hardware       |
 | ----------------- | --------- | --------- | ----------- | -------------- |

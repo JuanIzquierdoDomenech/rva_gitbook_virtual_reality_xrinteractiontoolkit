@@ -15,17 +15,17 @@ Open **Unity Hub** and create a new project using:
 
 <figure><img src=".gitbook/assets/01_creating_project.png" alt=""><figcaption></figcaption></figure>
 
-> 💡 **Why URP?** The Universal Render Pipeline offers better performance on standalone VR headsets like Meta Quest 3.
+{% hint style="info" %}
+**Why URP?**&#x20;
 
-***
+The Universal Render Pipeline offers better performance on standalone VR headsets like Meta Quest 3.
+{% endhint %}
 
 ### Install XR Plugin Management
 
 Navigate to **Edit → Project Settings... → XR Plug-in Management** and click **Install XR Plugin Management**.
 
 <figure><img src=".gitbook/assets/02_install_plugin.png" alt=""><figcaption></figcaption></figure>
-
-***
 
 ### Enable OpenXR
 
@@ -40,8 +40,6 @@ OpenXR is an open standard supported by Meta, Valve, Microsoft, and others.&#x20
 
 This means your project can target multiple headsets (Quest, Vive, Index, WMR) with minimal changes.
 {% endhint %}
-
-***
 
 ### Configure Interaction Profiles
 
@@ -58,8 +56,6 @@ Select the **Android tab** in XR Plug-in Management, then go to **OpenXR** setti
 They define how physical controller buttons and inputs map to your application. Each controller type (Oculus Touch, Valve Index, HP Reverb) has a different profile. By adding multiple profiles, your app can work with different controllers automatically.
 {% endhint %}
 
-***
-
 ### Fix Project Validation issues
 
 Go to **Project Validation** under XR Plug-in Management and click **Fix All** to resolve any configuration issues.
@@ -73,8 +69,6 @@ It verifies settings like graphics API (Vulkan vs OpenGL), texture compression f
 
 Fixing these early prevents build failures and runtime issues later.
 {% endhint %}
-
-***
 
 ### Basic camera tracking (manual approach)
 
@@ -100,8 +94,6 @@ It's a component that takes tracking data from an XR device (headset, controller
 
 {% embed url="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.8/api/UnityEngine.InputSystem.XR.TrackedPoseDriver.html?q=tracked+pose+driver" %}
 
-***
-
 ### Install XR Interaction Toolkit
 
 Open **Window → Package Manager**, select **Unity Registry**, and install **XR Interaction Toolkit**.
@@ -120,8 +112,6 @@ It's Unity's official high-level framework for building VR and AR interactions. 
 
 {% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/index.html" %}
 
-***
-
 ### Import Starter Assets
 
 After installation, go to the **Samples** tab and import **Starter Assets**.
@@ -136,8 +126,6 @@ After installation, go to the **Samples** tab and import **Starter Assets**.
 * **Demo Scenes**: A working example for reference
 {% endhint %}
 
-***
-
 ### Switch build platform to Meta Quest
 
 Open **File → Build Profiles**, select **Meta Quest**, and click **Switch Platform**.
@@ -149,8 +137,6 @@ Open **File → Build Profiles**, select **Meta Quest**, and click **Switch Plat
 
 Make sure your Quest has Developer Mode enabled and USB debugging authorized. The first time you connect, the headset may ask you to trust the computer.
 {% endhint %}
-
-***
 
 ### Add XR Origin
 
@@ -170,8 +156,6 @@ It's the "player rig" for VR, a hierarchy that represents the user's position in
 When the user physically moves in their play space, the camera moves within this hierarchy. When you teleport the player, you move the XR Origin root.
 {% endhint %}
 
-***
-
 ### Configure Tracking Origin Mode
 
 Select the **XR Origin** and set **Tracking Origin Mode** to **Floor**.
@@ -188,8 +172,6 @@ Select the **XR Origin** and set **Tracking Origin Mode** to **Floor**.
 For Meta Quest with guardian/boundary configured, **Floor** mode uses the floor level you set during guardian setup. This means a 1.8m tall user will have their camera at Y=1.8, and a 1.6m user at Y=1.6.
 {% endhint %}
 
-***
-
 ### Create hand tracking objects
 
 Under **XR Origin → Camera Offset**, create two empty GameObjects:
@@ -200,8 +182,6 @@ Under **XR Origin → Camera Offset**, create two empty GameObjects:
 Add a **`TrackedPoseDriver (Input System)`** component to each.
 
 <figure><img src=".gitbook/assets/12_empty_go_left_hand_dup.png" alt=""><figcaption></figcaption></figure>
-
-***
 
 ### Configure left hand input
 
@@ -225,8 +205,6 @@ Final configuration for Left Hand:
 The Input System's action-based approach provides abstraction. The action "XRI Left/Position" could come from an Oculus Touch controller, a Valve Index controller, or even a hand tracking system, so that your code doesn't need to know which device is providing the data. This makes your project portable across different hardware.
 {% endhint %}
 
-***
-
 ### Configure right hand input
 
 Apply the same configuration to **Right Hand** using XRI Right actions:
@@ -247,8 +225,6 @@ The Input Action Asset defines separate action maps for left and right controlle
 * You might want different behaviors per hand (dominant hand for tools, off-hand for shields)
 {% endhint %}
 
-***
-
 ### Add visual representation for hands
 
 Add a **Sphere** as a child of each hand to visualize controller positions:
@@ -264,8 +240,6 @@ Add a **Sphere** as a child of each hand to visualize controller positions:
 Remove the collider to prevent unintended physics interactions.
 {% endhint %}
 
-***
-
 ### Install XR Interaction Simulator
 
 To test without a VR headset, import the **XR Interaction Simulator** sample from Package Manager.
@@ -277,8 +251,6 @@ To test without a VR headset, import the **XR Interaction Simulator** sample fro
 
 Putting on and taking off a headset constantly during development is slow and tiring. The simulator lets you quickly test interactions, iterate on designs, and debug issues using keyboard and mouse.
 {% endhint %}
-
-***
 
 ### Add Simulator to the scene
 
@@ -305,7 +277,7 @@ Location: `Assets/Samples/XR Interaction Toolkit/[version]/XR Interaction Simula
 
 ***
 
-### Documentation
+## Documentation
 
 * [XR Interaction Toolkit Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html)
 * [OpenXR Plugin Documentation](https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.8/manual/index.html)

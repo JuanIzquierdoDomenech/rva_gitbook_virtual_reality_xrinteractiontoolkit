@@ -73,7 +73,7 @@ The **Control Type** specifies the data format:
 
 To read input values in your scripts, use `InputActionProperty` from the Unity Input System.
 
-### Step 1: Create the Script
+### Create the Script
 
 Create a new C# script called `InputManager`:
 
@@ -98,7 +98,7 @@ It's a serializable wrapper that can hold either:
 This flexibility lets you either create quick one-off actions or reference your centralized XRI Default Input Actions.
 {% endhint %}
 
-### Step 2: Configure as Reference
+### Configure as Reference
 
 Attach the script to a GameObject. In the Inspector, click the dropdown next to **Action Value** and select **Use Reference**.
 
@@ -106,7 +106,7 @@ Attach the script to a GameObject. In the Inspector, click the dropdown next to 
 
 Then drag any **Value-type action** from the Input Actions window (e.g., `XRI Right Interaction/Select Value`).
 
-### Step 3: Create Debug UI
+### Create Debug UI
 
 Create a **World Space Canvas** with a **Text (TMP)** element to display the input value in VR.
 
@@ -119,7 +119,7 @@ Create a **World Space Canvas** with a **Text (TMP)** element to display the inp
 
 <figure><img src=".gitbook/assets/06_create_canvas.png" alt=""><figcaption></figcaption></figure>
 
-### Step 4: Read and Display the Value
+### Read and Display the Value
 
 Update the script to read the action value every frame:
 
@@ -157,7 +157,7 @@ Assign the _Debug Text_ reference in the Inspector:
 
 <figure><img src=".gitbook/assets/08_drag.png" alt=""><figcaption></figcaption></figure>
 
-### Step 5: Test the Value Input
+### Test the Value Input
 
 Run the project and press the trigger. You'll see the analog value change in real-time.
 
@@ -258,7 +258,7 @@ Run the project and observe the difference between analog values and button stat
 
 ***
 
-### Documentation
+## Documentation
 
 * [Unity Input System Documentation](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.17/manual/index.html)
 * [XR Interaction Toolkit Input](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/general-setup.html)

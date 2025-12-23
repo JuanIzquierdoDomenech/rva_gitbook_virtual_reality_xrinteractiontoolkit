@@ -27,8 +27,6 @@ This gives us **four categories**:
 
 <figure><img src="../.gitbook/assets/ui_types_2.png" alt=""><figcaption></figcaption></figure>
 
-***
-
 ### Diegetic UI
 
 > Exists in the game world **and** is acknowledged by characters.
@@ -55,8 +53,6 @@ _**Metroid Prime**: The entire UI is framed as the inside of Samus's helmet._
 
 <figure><img src="../.gitbook/assets/diegetic_4.png" alt="" width="563"><figcaption></figcaption></figure>
 
-***
-
 ### Non-Diegetic UI
 
 > **Not** in the game space and **not** in the game story.
@@ -79,8 +75,6 @@ _**Ori and the Blind Forest**: Pause menus exist entirely outside the game world
 
 <figure><img src="../.gitbook/assets/non_diegetic_3.jpg" alt=""><figcaption></figcaption></figure>
 
-***
-
 ### Spatial UI
 
 > Exists **in the game space** but **not** in the story.
@@ -100,8 +94,6 @@ _**Tomb Raider I-III Remastered**: The environment shows an icon next to an inte
 <figure><img src="../.gitbook/assets/tr.gif" alt="" width="563"><figcaption></figcaption></figure>
 
 Other examples: health bars floating above enemies, interaction prompts on objects.
-
-***
 
 ### Meta UI
 

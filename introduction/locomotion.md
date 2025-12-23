@@ -15,8 +15,6 @@ This conflict causes **motion sickness** — one of VR's biggest UX challenges.
 
 VR developers have created several techniques to minimize discomfort.
 
-***
-
 ### Head and Body Tracking
 
 The safest movement is **real movement**. VR headsets track head rotation across three or six axes:
@@ -28,8 +26,6 @@ The safest movement is **real movement**. VR headsets track head rotation across
 {% hint style="warning" %}
 Head rotation rarely causes sickness; the problem is **translation** (moving through space without really moving).
 {% endhint %}
-
-***
 
 ### Teleportation
 
@@ -51,8 +47,6 @@ Typical implementation:
 
 **Cons**: Breaks immersion, can feel unnatural
 
-***
-
 ### Tunneling (Vignette)
 
 For continuous movement, **tunneling** reduces peripheral vision during motion.
@@ -73,8 +67,6 @@ This reduces vestibular conflict by limiting motion cues to central vision.
 Some games use **cockpits or vehicles** as a natural reference frame, because the static interior provides visual stability.
 {% endhint %}
 
-***
-
 ### Third-Person: Chasing camera
 
 An alternative approach: **detach the camera from the player's head**.
@@ -91,6 +83,6 @@ The camera follows an avatar from behind, similar to traditional 3D games.
 
 ***
 
-### Choosing a locomotion method
+## Choosing a locomotion method
 
 <table><thead><tr><th width="176.44921875">Method</th><th width="153.2109375">Motion Sickness</th><th width="126.75">Immersion</th><th>Best For</th></tr></thead><tbody><tr><td><strong>Teleportation</strong></td><td>None</td><td>Low</td><td>Casual users, room-scale</td></tr><tr><td><strong>Tunneling</strong></td><td>Low</td><td>Medium</td><td>Exploration games</td></tr><tr><td><strong>Chasing Camera</strong></td><td>Low-Medium</td><td>Medium</td><td>Action games</td></tr><tr><td><strong>Free movement</strong></td><td>High</td><td>High</td><td>Experienced VR users only</td></tr></tbody></table>
