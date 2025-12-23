@@ -44,7 +44,7 @@ Create a new material with transparent settings:
 
 <figure><img src="../.gitbook/assets/21_trans_mat.png" alt=""><figcaption></figcaption></figure>
 
-### Add Visual Placeholder
+### Add a visual placeholder
 
 Create a **Sphere** as a child of the Socket Interactor:
 
@@ -62,7 +62,7 @@ The transparent sphere is purely visual. It's used to shows users where to place
 The actual detection is done by the `SphereCollider` on the parent Socket Interactor. Just make sure to remove the collider from the visual mesh.
 {% endhint %}
 
-### Test the Socket
+### Test the socket
 
 Run the project. When you release an object inside the socket's range, it snaps into position.
 
@@ -76,7 +76,7 @@ Run the project. When you release an object inside the socket's range, it snaps 
 4. The object snaps to the socket's position and stays there
 5. Grab the object again to remove it from the socket
 
-### Additional Socket Configuration
+### Additional socket configuration
 
 The `XRSocketInteractor` has several useful options for customization:
 
