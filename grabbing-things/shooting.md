@@ -6,7 +6,7 @@ icon: gun-squirt
 
 A common use case for grabbed objects is **using** them with the trigger button. In XRI terminology, this is called **Activate**. Let's create a gun that shoots bullets when activated.
 
-## Import a gun model
+## Preparing the model
 
 For this example, we'll use the free **Bit Gun** asset from the Unity Asset Store.
 
@@ -18,7 +18,7 @@ For this example, we'll use the free **Bit Gun** asset from the Unity Asset Stor
 You can use any gun model, or even a simple cube.
 {% endhint %}
 
-## Set up the gun as grabbable
+### Set up the gun as grabbable
 
 Add the required components to the gun model:
 
@@ -38,7 +38,7 @@ Switch to **Pivot** mode (not Center) in the Scene view toolbar to see where the
 In the Bit Gun model, the pivot happens to be at the handle, but this isn't always the case. Many models have their pivot at the center or bottom, which would make the gun grab awkwardly.
 {% endhint %}
 
-## Create an Attach Transform
+### Create an Attach Transform
 
 To control exactly **where and how** the gun is held, create an **Attach Transform** GameObject.
 
@@ -66,11 +66,11 @@ In the **`XRGrabInteractable`** component, assign your **AttachTransform** to th
 It defines the point on the object that aligns with the interactor's attach point. Without it, the object's origin (pivot) is used, which may not be where you want to hold it.
 {% endhint %}
 
-## Grab the gun!
-
 Run the project and grab the gun. It should now be held correctly at the handle with the barrel pointing forward.
 
 <figure><img src="../.gitbook/assets/14_grabbing_gun.gif" alt=""><figcaption></figcaption></figure>
+
+***
 
 ## Create a muzzle point
 
@@ -88,7 +88,7 @@ The muzzle point defines **where bullets spawn** and **which direction they trav
 The bullet needs to spawn at a specific position (barrel tip) and travel in a specific direction (forward from barrel). The muzzle transform provides both.
 {% endhint %}
 
-## Create the gun script
+### Create the gun script
 
 Create a new script called `Gun`:
 
@@ -143,7 +143,7 @@ public class Gun : MonoBehaviour
 3. It applies an impulse force in the muzzle's forward direction
 4. The bullet is automatically destroyed after `bulletLifetime` seconds to prevent memory buildup
 
-## Create the bullet prefab
+### Create the bullet prefab
 
 Create a simple bullet prefab:
 
@@ -165,7 +165,7 @@ Create a simple bullet prefab:
 * Use **Continuous Collision Detection** for fast-moving bullets
 {% endhint %}
 
-## Configure the gun script
+### Configure the gun script
 
 Add the **Gun** script to your gun GameObject and assign:
 
@@ -176,7 +176,7 @@ Add the **Gun** script to your gun GameObject and assign:
 
 <figure><img src="../.gitbook/assets/17_gun_script_props.png" alt=""><figcaption></figcaption></figure>
 
-## Connect the Activate Event
+### Connect the Activate Event
 
 The `XRGrabInteractable` has an **Activated** event that fires when the player presses the trigger while holding the object.
 
@@ -206,7 +206,7 @@ Bit Gun                           [Box Collider, Rigidbody, XR Grab Interactable
 └── Muzzle                        (bullet spawn point at barrel)
 ```
 
-### Troubleshooting
+## Troubleshooting
 
 <table><thead><tr><th width="392.84375">Problem</th><th>Likely Cause</th></tr></thead><tbody><tr><td>Gun held at wrong angle</td><td>AttachTransform rotation incorrect</td></tr><tr><td>Bullets spawn inside gun</td><td>Muzzle position too close to gun</td></tr><tr><td>Bullets go wrong direction</td><td>Muzzle rotation incorrect</td></tr><tr><td>Bullets don't move</td><td>Missing <code>Rigidbody</code> on bullet</td></tr><tr><td>Shooting doesn't trigger</td><td>Event not connected</td></tr><tr><td>Multiple bullets per shot</td><td>Event firing multiple times</td></tr></tbody></table>
 
