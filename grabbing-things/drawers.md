@@ -6,37 +6,64 @@ icon: arrow-left-long-to-line
 
 <figure><img src="../.gitbook/assets/Gemini_Generated_Image_2i7tbv2i7tbv2i7t.png" alt=""><figcaption></figcaption></figure>
 
-Drawers work similarly to doors but use a **Configurable Joint** instead of a Hinge Joint, since drawers slide linearly rather than rotate.
+Drawers work similarly to doors but use a **`ConfigurableJoint`** instead of a `HingeJoint`, since drawers slide linearly rather than rotate.
 
 Unlike doors where we grab a handle, drawers can often be **grabbed directly** since the entire drawer face acts as the interaction point.
 
-## Creating the Drawer
+## Creating the drawer
 
 Select the drawer child object (e.g., **cabinet\_drawer\_01**) and add:
 
-* **Box Collider** (fit it to the drawer shape)
-* **Rigidbody**
-* **Configurable Joint**
-* **XR Grab Interactable**
+* **`BoxCollider`** (fit it to the drawer shape)
+* **`Rigidbody`**
+* **`ConfigurableJoint`**
+* **`XRGrabInteractable`**
 
-> 💡 **Difference from doors:** For drawers, we add the XR Grab Interactable directly to the drawer itself, not to a separate handle. This is because the drawer front panel serves as the natural grab point.
+<figure><img src="../.gitbook/assets/35_all_components.png" alt=""><figcaption></figcaption></figure>
 
 ### Configure the Configurable Joint
 
-The Configurable Joint allows precise control over which axes can move and how far.
+The `ConfigurableJoint` allows precise control over which axes can move and how far.
 
 Configure it for linear sliding motion:
 
-* **Axis**: (1, 0, 0) — the primary axis direction
+**Anchor Settings:**
+
+* **Anchor**: (0, 0, 0) ⇒ the joint's pivot point in local space
+* **Axis**: (1, 0, 0) ⇒  the primary axis direction
+* **Auto Configure Connected Anchor**: Disabled
+* **Connected Anchor**: Set to the drawer's world position (e.g., -1.55, 0.53, -1.28)
+
+**Motion Settings:**
+
 * **X Motion**: Locked
 * **Y Motion**: Locked
 * **Z Motion**: Limited (the sliding direction)
 * **Angular X Motion**: Locked
 * **Angular Y Motion**: Locked
 * **Angular Z Motion**: Locked
-* **Linear Limit**: 0.1 (how far the drawer can slide, in meters)
 
-> 💡 **Motion settings explained:**
+**Limits:**
+
+* **Linear Limit**: 0.1 (how far the drawer can slide, in meters ⇒ 10 Cm)
+
+<figure><img src="../.gitbook/assets/36_setup_joint.png" alt="" width="563"><figcaption></figcaption></figure>
+
+<table><thead><tr><th width="316.6015625">Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong>Anchor</strong></td><td>The joint's pivot point in the object's local space. (0,0,0) means the joint is at the object's origin.</td></tr><tr><td><strong>Axis</strong></td><td>The primary axis of the joint. Determines the "forward" direction for the joint's calculations.</td></tr><tr><td><strong>Auto Configure Connected Anchor</strong></td><td>When enabled, Unity automatically calculates the Connected Anchor. <strong>Disable this</strong> for more control.</td></tr><tr><td><strong>Connected Anchor</strong></td><td>The point in world space (or the connected body's space) where the joint attaches. This defines where the drawer "wants to return to."</td></tr></tbody></table>
+
+{% hint style="warning" %}
+**Why disable Auto Configure Connected Anchor?**&#x20;
+
+Auto-configuration can cause unexpected behavior, especially when the drawer's starting position doesn't match what Unity calculates. By manually setting the Connected Anchor to the drawer's actual world position, you ensure the joint knows exactly where the drawer's "home" position is.
+{% endhint %}
+
+{% hint style="info" %}
+**Finding the correct Connected Anchor values:**
+
+1. Select your drawer and note its **Transform Position** values in the Inspector
+2. Use these same values (or close to them) for the **Connected Anchor**
+3. This tells the joint "this is where the drawer starts, constrain movement from here"
+{% endhint %}
 
 | Setting     | Meaning                                          |
 | ----------- | ------------------------------------------------ |
@@ -44,44 +71,30 @@ Configure it for linear sliding motion:
 | **Limited** | Movement allowed within the Linear Limit         |
 | **Free**    | Unlimited movement (not recommended for drawers) |
 
-> 💡 **Why lock all Angular motions?** Drawers should only slide, not rotate. Locking all angular axes prevents the drawer from tilting or spinning when grabbed.
-
-> 💡 **Choosing the sliding axis:** The axis depends on your drawer's orientation:
->
-> * **Z Motion Limited**: Drawer slides forward/backward (most common)
-> * **X Motion Limited**: Drawer slides left/right
-> * Adjust based on how your model is oriented in the scene
-
-> 💡 **Linear Limit value:** This is in meters. A value of 0.1 means the drawer can slide 10cm from its starting position. Measure your drawer depth and set appropriately.
-
 ### Configure XR Grab Interactable
 
-Configure the XR Grab Interactable for constrained physics movement:
+Configure the `XRGrabInteractable` for constrained physics movement:
 
 * **Movement Type**: **Velocity Tracking**
-* **Track Rotation**: ✗ Disabled
-* **Track Scale**: ✗ Disabled
+* **Track Rotation**: Disabled
+* **Track Scale**: Disabled
 
-> ⚠️ **Critical settings:**
+<figure><img src="../.gitbook/assets/37_grab_config.png" alt=""><figcaption></figcaption></figure>
 
-| Setting            | Value             | Why                                 |
-| ------------------ | ----------------- | ----------------------------------- |
-| **Movement Type**  | Velocity Tracking | Required for physics joints to work |
-| **Track Rotation** | Disabled          | Drawer shouldn't rotate with hand   |
-| **Track Scale**    | Disabled          | Drawer shouldn't scale              |
+<table><thead><tr><th width="183.515625">Setting</th><th width="197.23828125">Value</th><th>Why</th></tr></thead><tbody><tr><td><strong>Movement Type</strong></td><td>Velocity Tracking</td><td>Required for physics joints to work</td></tr><tr><td><strong>Track Rotation</strong></td><td>Disabled</td><td>Drawer shouldn't rotate with hand</td></tr><tr><td><strong>Track Scale</strong></td><td>Disabled</td><td>Drawer shouldn't scale</td></tr></tbody></table>
 
-> 💡 **Why disable Track Rotation?** When you grab the drawer, you only want it to follow your hand's position (pull motion), not rotation. If Track Rotation were enabled, twisting your wrist would try to rotate the drawer, fighting against the locked angular constraints and causing jittery behavior.
-
-### Test the Drawer
+### Try out the drawer!
 
 Run the project, grab the drawer, and pull to open it!
 
-> 💡 **Expected behavior:**
->
-> 1. Grab the drawer front with the grip button
-> 2. Pull your hand back — the drawer slides open
-> 3. Push forward — the drawer slides closed
-> 4. The drawer stops at the Linear Limit (fully open) and at its starting position (fully closed)
+<figure><img src="../.gitbook/assets/38_drawer_example.gif" alt=""><figcaption></figcaption></figure>
+
+**Expected behavior:**
+
+1. Grab the drawer front with the grip button
+2. Pull your hand back ⇒ the drawer slides open
+3. Push forward ⇒ the drawer slides closed
+4. The drawer stops at the Linear Limit (fully open) and at its starting position (fully closed)
 
 ***
 
@@ -103,7 +116,7 @@ SM_cabinet
 
 ***
 
-## Troubleshooting Drawers
+## Troubleshooting drawers
 
 | Problem                          | Cause                               | Solution                              |
 | -------------------------------- | ----------------------------------- | ------------------------------------- |
@@ -116,7 +129,7 @@ SM_cabinet
 
 ***
 
-## Physics Joint Summary
+## Physics joint summary
 
 | Joint Type             | Use Case                  | Movement                                |
 | ---------------------- | ------------------------- | --------------------------------------- |
