@@ -6,7 +6,9 @@ icon: person-walking
 
 <figure><img src="../.gitbook/assets/458291392_1832835783907740_1901046403817181485_n.png" alt=""><figcaption></figcaption></figure>
 
-## Add CharacterController
+## Moving and turning
+
+### Add CharacterController
 
 Select the **XR Origin (VR)** and add a **`CharacterController`** component.
 
@@ -22,9 +24,7 @@ Select the **XR Origin (VR)** and add a **`CharacterController`** component.
 You don't want your player bouncing off walls or being pushed by objects.
 {% endhint %}
 
-***
-
-## Create Locomotion GameObject
+### Create Locomotion GameObject
 
 Create an empty GameObject as a child of **XR Origin (VR)** called **Locomotion**. Add these components:
 
@@ -41,9 +41,7 @@ Create an empty GameObject as a child of **XR Origin (VR)** called **Locomotion*
 
 <table><thead><tr><th width="255.4609375">Component</th><th>Purpose</th></tr></thead><tbody><tr><td><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-body-transformer.html"><strong><code>XRBodyTransformer</code></strong></a></td><td>Applies transformations to the XR Origin based on provider requests. References the <code>CharacterController</code> for physics.</td></tr><tr><td><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/locomotion-mediator.html"><strong><code>LocomotionMediator</code></strong></a></td><td>Queues and coordinates transformation requests from multiple providers. Prevents conflicts between move, turn, and teleport.</td></tr></tbody></table>
 
-***
-
-## Add Move Provider
+### Add Move Provider
 
 Create a child GameObject under **Locomotion** called **Move**. Add a **`ContinuousMoveProvider`** component and configure it:
 
@@ -58,9 +56,7 @@ Create a child GameObject under **Locomotion** called **Move**. Add a **`Continu
 
 <table><thead><tr><th width="209.80078125">Property</th><th>Description</th></tr></thead><tbody><tr><td><strong>Move Speed</strong></td><td>Movement speed in meters per second (default: 1)</td></tr><tr><td><strong>Enable Strafe</strong></td><td>Allow sideways movement with thumbstick left/right</td></tr><tr><td><strong>Enable Fly</strong></td><td>Allow vertical movement (useful for development/debugging)</td></tr><tr><td><strong>Forward Source</strong></td><td>Transform that defines "forward" direction, usually the camera</td></tr><tr><td><strong>Use Gravity</strong></td><td>Apply gravity when not grounded</td></tr></tbody></table>
 
-***
-
-## Add Turn Provider
+### Add Turn Provider
 
 Create another child GameObject under **Locomotion** called **Turn**. Add a **`ContinuousTurnProvider`** component.
 
@@ -76,9 +72,7 @@ Configure it:
 
 <table><thead><tr><th width="209.73828125">Property</th><th>Description</th></tr></thead><tbody><tr><td><strong>Turn Speed</strong></td><td>Rotation speed in degrees per second (default: 60)</td></tr><tr><td><strong>Enable Turn Left Right</strong></td><td>Allow rotation with thumbstick left/right</td></tr><tr><td><strong>Enable Turn Around</strong></td><td>Allow 180° turn (usually with thumbstick down)</td></tr></tbody></table>
 
-***
-
-## Test Move and Turn
+### Test Move and Turn
 
 Run the project and use the thumbsticks to move and turn.
 
@@ -134,7 +128,7 @@ XR Origin (VR)
 
 ***
 
-### Documentation
+## Documentation
 
 * [XRI Locomotion Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/locomotion.html)
 * [Continuous Move Provider API](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/api/UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.html)

@@ -207,7 +207,7 @@ Run the project. The teleport ray should now only appear when you push the thumb
 
 ***
 
-### Updated hierarchy
+## Updated hierarchy
 
 After completing all locomotion setup, your hierarchy should look like this:
 
@@ -230,7 +230,7 @@ XR Origin (VR)                    [Layer: Ignore Raycast, Character Controller]
 
 ***
 
-### Documentation
+## Documentation
 
 * [XRI Teleportation Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/teleportation.html)
 * [VR Locomotion Design Guidelines](https://developer.oculus.com/resources/bp-locomotion/)

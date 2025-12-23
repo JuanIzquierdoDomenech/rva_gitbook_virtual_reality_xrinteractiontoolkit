@@ -78,8 +78,6 @@ This is a game-feel improvement where the player can still jump for a short time
 
 <figure><img src="../.gitbook/assets/Celeste-Coyote-Time.gif" alt=""><figcaption></figcaption></figure>
 
-***
-
 ### Jump Button Location
 
 The **Jump** action is bound to the **A button press**.
