@@ -92,7 +92,7 @@ It's a component that takes tracking data from an XR device (headset, controller
 
 Open **Window → Package Manager**, select **Unity Registry**, and install **XR Interaction Toolkit**.
 
-<figure><img src=".gitbook/assets/08_interaction_toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/xr_it_new.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **What is the XR Interaction Toolkit?**&#x20;
@@ -104,7 +104,7 @@ It's Unity's official high-level framework for building VR and AR interactions. 
 * **Interaction Manager**: The mediator that connects interactors with interactables
 {% endhint %}
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/index.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/index.html" %}
 
 ### Import Starter Assets
 
@@ -120,11 +120,17 @@ After installation, go to the **Samples** tab and import **Starter Assets**.
 * **Demo Scenes**: A working example for reference
 {% endhint %}
 
-### Switch build platform to Meta Quest
+{% hint style="warning" icon="dog" %}
+After importing the **Starter Assets**, you might need to fix some issued in the **Project Validation** window, such as importing the Text Mesh Pro package.
+{% endhint %}
 
-Open **File → Build Profiles**, select **Meta Quest**, and click **Switch Platform**.
+### Add Meta Quest to build profiles
 
-<figure><img src=".gitbook/assets/09_switch_platform_meta.png" alt=""><figcaption></figcaption></figure>
+Open **File → Build Profiles**, and add the Meta Quest build profile.
+
+<figure><img src=".gitbook/assets/meta_build_profile.png" alt=""><figcaption></figcaption></figure>
+
+After that, with the Meta Quest connected, click on **"Build And Run"** in the Build Profiles window to install the app.
 
 {% hint style="info" %}
 **USB Debugging**
