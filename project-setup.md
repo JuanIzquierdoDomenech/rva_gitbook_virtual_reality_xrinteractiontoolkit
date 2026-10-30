@@ -179,7 +179,7 @@ Under **XR Origin → Camera Offset**, create two empty GameObjects:
 * **Left Hand**
 * **Right Hand**
 
-Add a **`TrackedPoseDriver (Input System)`** component to each.
+Set their position to (0,0,0) and add a **`TrackedPoseDriver (Input System)`** component to each.
 
 <figure><img src=".gitbook/assets/12_empty_go_left_hand_dup.png" alt=""><figcaption></figcaption></figure>
 
@@ -254,7 +254,7 @@ Putting on and taking off a headset constantly during development is slow and ti
 
 ### Add Simulator to the scene
 
-Drag the **XR Interaction Simulator** prefab into your scene hierarchy.
+Drag the **XR Interaction Simulator** prefab into your scene hierarchy and hit "Play".
 
 Location: `Assets/Samples/XR Interaction Toolkit/[version]/XR Interaction Simulator/`&#x20;
 
@@ -279,6 +279,6 @@ Location: `Assets/Samples/XR Interaction Toolkit/[version]/XR Interaction Simula
 
 ## Documentation
 
-* [XR Interaction Toolkit Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html)
-* [OpenXR Plugin Documentation](https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.8/manual/index.html)
+* [XR Interaction Toolkit Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/index.html)
+* [OpenXR Plugin Documentation](https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.18/manual/index.html)
 * [Meta Quest Developer Setup](https://developer.oculus.com/documentation/unity/unity-gs-overview/)
