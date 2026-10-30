@@ -11,15 +11,9 @@ description: >-
 Open **Unity Hub** and create a new project using:
 
 * **Editor version**: Unity 6 (6000.3.0f1 or later)
-* **Template**: Universal 3D (URP)
+* **Template**: Universal 3D
 
 <figure><img src=".gitbook/assets/01_creating_project.png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-**Why URP?**&#x20;
-
-The Universal Render Pipeline offers better performance on standalone VR headsets like Meta Quest 3.
-{% endhint %}
 
 ### Install XR Plugin Management
 
@@ -31,10 +25,10 @@ Navigate to **Edit → Project Settings... → XR Plug-in Management** and click
 
 In **XR Plug-in Management**, check **OpenXR** as your plug-in provider.
 
-<figure><img src=".gitbook/assets/03_activate_openxr.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/openxr_active_new.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Why OpenXR instead of Oculus?**&#x20;
+**Why OpenXR?**&#x20;
 
 OpenXR is an open standard supported by Meta, Valve, Microsoft, and others.&#x20;
 
@@ -53,12 +47,12 @@ Select the **Android tab** in XR Plug-in Management, then go to **OpenXR** setti
 {% hint style="info" %}
 **What are Interaction Profiles?**
 
-They define how physical controller buttons and inputs map to your application. Each controller type (Oculus Touch, Valve Index, HP Reverb) has a different profile. By adding multiple profiles, your app can work with different controllers automatically.
+They define how physical controller buttons and inputs map to your application. Each controller type has a different profile. By adding multiple profiles, your app can work with different controllers automatically.
 {% endhint %}
 
 ### Fix Project Validation issues
 
-Go to **Project Validation** under XR Plug-in Management and click **Fix All** to resolve any configuration issues.
+Go to **Project Validation** under XR Plug-in Management and click **Fix All** (you might need to click on it several times) to resolve any configuration issues.
 
 <figure><img src=".gitbook/assets/05_fix_all.png" alt=""><figcaption></figcaption></figure>
 

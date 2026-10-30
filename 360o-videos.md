@@ -56,7 +56,7 @@ Transcoding ensures the video is converted to a compatible format (usually H.264
 
 Scroll down in the Inspector to find the **Source Info** section (click on the name of the video, it's a dropdown button). Note the video's pixel dimensions because you'll need this for the Render Texture.
 
-![Video source information showing resolution](.gitbook/assets/02_video_info.png)
+<img src=".gitbook/assets/02_video_info.png" alt="Video source information showing resolution" width="563">
 
 {% hint style="info" %}
 **Resolution example**:&#x20;
@@ -88,7 +88,7 @@ Select the Render Texture and set its **Size** to match your video's resolution:
 
 * **Size**: 1920 × 960 (or whatever your video's resolution is)
 
-![Configuring Render Texture size to match video](.gitbook/assets/04_rt_size.png)
+<img src=".gitbook/assets/04_rt_size.png" alt="Configuring Render Texture size to match video" width="563">
 
 ### Create a panoramic material
 
