@@ -261,5 +261,5 @@ Run the project and observe the difference between analog values and button stat
 ## Documentation
 
 * [Unity Input System Documentation](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.17/manual/index.html)
-* [XR Interaction Toolkit Input](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/general-setup.html)
+* [XR Interaction Toolkit Input](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/general-setup.html)
 * [Input Action Assets](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.17/manual/ActionAssets.html)
