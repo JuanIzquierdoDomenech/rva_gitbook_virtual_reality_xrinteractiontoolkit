@@ -28,7 +28,7 @@ Gaze interaction follows a state machine:
 
 **Use cases**: Mobile VR (Google Cardboard), accessibility, hands-free interfaces.
 
-**Limitation**: Low precision sin e everything the user looks at becomes a potential input.
+**Limitation**: Low precision since everything the user looks at becomes a potential input.
 
 ### Ray interaction
 
