@@ -27,6 +27,8 @@ Gravity should have a higher priority than movement (default 0) so it's always a
 
 <table><thead><tr><th width="265.68359375">Property</th><th>Description</th></tr></thead><tbody><tr><td><strong>Use Gravity</strong></td><td>Enable/disable gravity application</td></tr><tr><td><strong>Terminal Velocity</strong></td><td>Maximum falling speed (default: 90 m/s)</td></tr><tr><td><strong>Gravity Acceleration Modifier</strong></td><td>Multiplier for gravity strength</td></tr><tr><td><strong>Sphere Cast Layer Mask</strong></td><td>Which layers count as "ground" for grounded detection</td></tr></tbody></table>
 
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/gravity-provider.html" %}
+
 {% hint style="info" %}
 **What does the `GravityProvider` do?**&#x20;
 
@@ -70,13 +72,15 @@ Configure it:
 
 <table><thead><tr><th width="321.36328125">Property (Variable Height Jump Settings)</th><th>Description</th></tr></thead><tbody><tr><td><strong>Variable Height Jump</strong></td><td>Holding the button longer jumps higher</td></tr><tr><td><strong>Min Jump Hold Time</strong></td><td>Minimum time for a short jump</td></tr><tr><td><strong>Max Jump Hold Time</strong></td><td>Time held for maximum jump height</td></tr><tr><td><strong>Early Out Deceleration Speed</strong></td><td>How quickly to stop rising when button released</td></tr></tbody></table>
 
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/jump-provider.html" %}
+
 {% hint style="info" %}
 **What is Jump Forgiveness Window (Coyote Time)?**&#x20;
 
 This is a game-feel improvement where the player can still jump for a short time after walking off a ledge. It makes platforming feel more responsive and forgiving. Named after the cartoon coyote who runs off cliffs and doesn't fall until he looks down!
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Celeste-Coyote-Time.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Celeste-Coyote-Time.gif" alt=""><figcaption><p>Celeste Coyote Time</p></figcaption></figure>
 
 ### Jump Button Location
 
