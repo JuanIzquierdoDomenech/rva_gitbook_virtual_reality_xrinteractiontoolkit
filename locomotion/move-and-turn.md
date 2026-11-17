@@ -39,7 +39,7 @@ Create an empty GameObject as a child of **XR Origin (VR)** called **Locomotion*
 * **Character Controller**: Reference the Character Controller you added in before
 * **Use Character Controller**: Enabled to ensure movement respects collisions
 
-<table><thead><tr><th width="255.4609375">Component</th><th>Purpose</th></tr></thead><tbody><tr><td><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-body-transformer.html"><strong><code>XRBodyTransformer</code></strong></a></td><td>Applies transformations to the XR Origin based on provider requests. References the <code>CharacterController</code> for physics.</td></tr><tr><td><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/locomotion-mediator.html"><strong><code>LocomotionMediator</code></strong></a></td><td>Queues and coordinates transformation requests from multiple providers. Prevents conflicts between move, turn, and teleport.</td></tr></tbody></table>
+<table><thead><tr><th width="255.4609375">Component</th><th>Purpose</th></tr></thead><tbody><tr><td><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-body-transformer.html"><strong><code>XRBodyTransformer</code></strong></a></td><td>Applies transformations to the XR Origin based on provider requests. References the <code>CharacterController</code> for physics.</td></tr><tr><td><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/locomotion-mediator.html"><strong><code>LocomotionMediator</code></strong></a></td><td>Queues and coordinates transformation requests from multiple providers. Prevents conflicts between move, turn, and teleport.</td></tr></tbody></table>
 
 ### Add Move Provider
 
@@ -52,7 +52,7 @@ Create a child GameObject under **Locomotion** called **Move**. Add a **`Continu
 
 <figure><img src="../.gitbook/assets/03_config_move_provider.png" alt=""><figcaption></figcaption></figure>
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/continuous-move-provider.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/continuous-move-provider.html" %}
 
 <table><thead><tr><th width="209.80078125">Property</th><th>Description</th></tr></thead><tbody><tr><td><strong>Move Speed</strong></td><td>Movement speed in meters per second (default: 1)</td></tr><tr><td><strong>Enable Strafe</strong></td><td>Allow sideways movement with thumbstick left/right</td></tr><tr><td><strong>Enable Fly</strong></td><td>Allow vertical movement (useful for development/debugging)</td></tr><tr><td><strong>Forward Source</strong></td><td>Transform that defines "forward" direction, usually the camera</td></tr><tr><td><strong>Use Gravity</strong></td><td>Apply gravity when not grounded</td></tr></tbody></table>
 
@@ -90,7 +90,7 @@ Run the project and use the thumbsticks to move and turn.
 
 On the **Turn** GameObject, add a **`SnapTurnProvider`** component alongside (or instead of) the Continuous Turn Provider.
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/snap-turn-provider.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/snap-turn-provider.html" %}
 
 Configure it:
 
@@ -130,7 +130,7 @@ XR Origin (VR)
 
 ## Documentation
 
-* [XRI Locomotion Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/locomotion.html)
-* [Continuous Move Provider API](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/api/UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.html)
-* [Snap Turn Provider API](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/api/UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning.SnapTurnProvider.html)
+* [XRI Locomotion Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/locomotion.html)
+* [Continuous Move Provider API](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/api/UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.html)
+* [Snap Turn Provider API](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/api/UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning.SnapTurnProvider.html)
 * [VR Comfort Best Practices](https://developer.oculus.com/resources/bp-locomotion/)
