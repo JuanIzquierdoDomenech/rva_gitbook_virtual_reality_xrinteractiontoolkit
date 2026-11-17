@@ -34,7 +34,7 @@ Unlike other locomotion providers that continuously transform the player, the `T
 When the interactor selects a **valid teleport destination**, it sends the request to the provider, which then moves the XR Origin instantly.
 {% endhint %}
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/teleportation-provider.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/teleportation-provider.html" %}
 
 ***
 
@@ -84,7 +84,7 @@ The **Teleport** interaction layer ensures this ray only interacts with teleport
 
 To allow teleportation to a surface, add a **`TeleportationArea`** component to any GameObject with a collider.
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/teleportation-area.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/teleportation-area.html" %}
 
 Create a new Plane in your scene (or use an existing floor), then add the **`TeleportationArea`** component:
 
@@ -232,5 +232,5 @@ XR Origin (VR)                    [Layer: Ignore Raycast, Character Controller]
 
 ## Documentation
 
-* [XRI Teleportation Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/teleportation.html)
+* [XRI Teleportation Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/teleportation.html)
 * [VR Locomotion Design Guidelines](https://developer.oculus.com/resources/bp-locomotion/)
