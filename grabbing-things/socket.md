@@ -129,6 +129,6 @@ Socket Interactor                 [XR Socket Interactor, Sphere Collider (Trigge
 
 ## Documentation
 
-* [XR Socket Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-socket-interactor.html)
-* [Interaction Layers](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/interaction-layers.html)
+* [XR Socket Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-socket-interactor.html)
+* [Interaction Layers](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/interaction-layers.html)
 
