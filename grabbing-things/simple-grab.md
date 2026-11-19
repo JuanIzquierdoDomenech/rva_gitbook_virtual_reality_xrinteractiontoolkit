@@ -11,9 +11,9 @@ To grab objects, you need:
 1. **`XRDirectInteractor`** on the hands (the "grabbers")
 2. **`XRGrabInteractable`** on objects (the "grabbables")
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-direct-interactor.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-direct-interactor.html" %}
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-grab-interactable.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-grab-interactable.html" %}
 
 ### Add Direct Interactor to Left Hand
 
@@ -205,6 +205,6 @@ Camera Offset
 
 ## Documentation
 
-* [XR Grab Interactable Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-grab-interactable.html)
-* [XR Direct Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-direct-interactor.html)
-* [Interaction Layer Mask](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/interaction-layers.html)
+* [XR Grab Interactable Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-grab-interactable.html)
+* [XR Direct Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-direct-interactor.html)
+* [Interaction Layer Mask](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/interaction-layers.html)
