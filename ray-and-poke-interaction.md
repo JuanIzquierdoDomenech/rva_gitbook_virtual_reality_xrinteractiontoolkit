@@ -189,7 +189,7 @@ It prevents multiple interactors from selecting objects at the same time. For ex
 The matrix at the bottom lets you control which interactors can interrupt others. By default, all interactors can override each other.
 {% endhint %}
 
-{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-interaction-group.html" %}
+{% embed url="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-interaction-group.html" %}
 
 ***
 
@@ -269,8 +269,8 @@ Camera Offset
 
 ## Documentation
 
-* [XR Ray Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-ray-interactor.html)
-* [XR Poke Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-poke-interactor.html)
-* [XR UI Input Module Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-ui-input-module.html)
-* [Tracked Device Graphic Raycaster](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/tracked-device-graphic-raycaster.html)
-* [XR Interaction Group](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-interaction-group.html)
+* [XR Ray Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-ray-interactor.html)
+* [XR Poke Interactor Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-poke-interactor.html)
+* [XR UI Input Module Documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-ui-input-module.html)
+* [Tracked Device Graphic Raycaster](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/tracked-device-graphic-raycaster.html)
+* [XR Interaction Group](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.6/manual/xr-interaction-group.html)
